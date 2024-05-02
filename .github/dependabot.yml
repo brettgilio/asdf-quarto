@@ -1,12 +1,18 @@
 version: 2
 updates:
+<<<<<<< HEAD
   # dependabot for GitHub Actions for this repo
+=======
+>>>>>>> fa19415 (Generate asdf-quarto plugin from template.)
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+<<<<<<< HEAD
   # dependabot for GitHub Actions for the template
   - package-ecosystem: "github-actions"
     directory: "template/.github/"
     schedule:
       interval: "weekly"
+=======
+>>>>>>> fa19415 (Generate asdf-quarto plugin from template.)

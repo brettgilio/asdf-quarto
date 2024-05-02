@@ -7,8 +7,13 @@ on:
   pull_request:
 
 jobs:
+<<<<<<< HEAD
   test:
     name: template setup test
+=======
+  plugin_test:
+    name: asdf plugin test
+>>>>>>> fa19415 (Generate asdf-quarto plugin from template.)
     strategy:
       matrix:
         os:
@@ -16,6 +21,7 @@ jobs:
           - macos-latest
     runs-on: ${{ matrix.os }}
     steps:
+<<<<<<< HEAD
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Run Template Setup
@@ -45,3 +51,9 @@ jobs:
                    --or -e "<TOOL CHECK>" \
                    --or -e "<YOUR NAME>" \
                    --or -e"<YOUR GITHUB USERNAME>"
+=======
+      - name: asdf_plugin_test
+        uses: asdf-vm/actions/plugin-test@v2
+        with:
+          command: quarto --version
+>>>>>>> fa19415 (Generate asdf-quarto plugin from template.)

@@ -25,7 +25,11 @@
 
 <!--- Please describe in detail how you tested your changes. -->
 
+<<<<<<< HEAD
 ## Checklist:
+=======
+## Checklist
+>>>>>>> fa19415 (Generate asdf-quarto plugin from template.)
 
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
 <!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
