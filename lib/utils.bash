@@ -37,12 +37,13 @@ list_all_versions() {
 }
 
 download_release() {
-	local version filename url
+	local version filename platform url
+	platform="linux-amd64"  # Adjust this as needed for different platforms
 	version="$1"
 	filename="$2"
 
-	# TODO: Adapt the release URL convention for quarto
-	url="$GH_REPO/archive/v${version}.tar.gz"
+	# Correct URL format for downloading releases directly
+	url="https://github.com/quarto-dev/quarto-cli/releases/download/v${version}/quarto-${version}-${platform}.tar.gz"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
