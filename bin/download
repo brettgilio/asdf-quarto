@@ -12,10 +12,11 @@ mkdir -p "$ASDF_DOWNLOAD_PATH"
 
 # Construct the download URL and file name
 platform="linux-amd64"  # Adjust this as needed for different platforms
-release_url="https://github.com/quarto-dev/quarto-cli/releases/download/v${ASDF_INSTALL_VERSION}/quarto-${ASDF_INSTALL_VERSION}-${platform}"
+release_url="https://github.com/quarto-dev/quarto-cli/releases/download/v${ASDF_INSTALL_VERSION}/quarto-${ASDF_INSTALL_VERSION}-${platform}.tar.gz"
+release_file="$ASDF_DOWNLOAD_PATH/quarto-${ASDF_INSTALL_VERSION}-${platform}.tar.gz"
 
 # Download tar.gz file to the download directory
-download_release "$release_url"
+download_release "$release_url" "$release_file"
 
 #  Extract contents of tar.gz file into the download directory
 tar -xzf "$release_file" -C "$ASDF_DOWNLOAD_PATH" --strip-components=1 || fail "Could not extract $release_file"
